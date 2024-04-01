@@ -6,5 +6,7 @@ export default {
     PROJECT: 'Project',
     SETTINGS: 'Settings',
     VIEW: 'view',
-    HOME_TAB: 'home tab',
+    HOME_TAB: 'home',
+    OTP:'Enter OTP',
+    
   };

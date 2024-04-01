@@ -28,20 +28,6 @@ export default function Settings() {
                     require('../../assets/user.png')
                   }
                   style={styles.profileAvatar} />
-  
-                {/* <TouchableOpacity
-                  onPress={() => {
-  
-  
-              
-                  }}>
-                  <View style={styles.profileAction}>
-                    <FeatherIcon
-                      color="#fff"
-                      name="edit-3"
-                      size={15} />
-                  </View>
-                </TouchableOpacity> */}
               </View>
             </TouchableOpacity>
   

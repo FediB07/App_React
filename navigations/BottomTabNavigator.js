@@ -1,13 +1,10 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
-//import ROUTES from '../constants/ROUTES';
 import { useNavigation } from '@react-navigation/native';
 import { StyleSheet } from 'react-native';
 import Home from '../Screens/home/Home';
-import Noeud from '../Screens/home/Noeud';
 import Project from '../Screens/home/Project';
 import Settings from '../Screens/home/Settings';
-import Views from '../Screens/home/Views';
 import { COLORS, ROUTES } from '../constants';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -28,19 +25,17 @@ export default function BottomTabNavigator(props) {
 
       } else if (rn === ROUTES.HOME_TAB) {
         iconName = focused ? 'home' : 'home-outline';
-
-      } else if (rn === ROUTES.NOEUD) {
-        iconName = focused ? 'list' : 'list-outline';
-      }else if (rn === ROUTES.PROJECT) {
-        iconName = focused ? 'person' : 'person-outline';
-      }else if (rn === ROUTES.VIEW) {
+      } 
+      else if (rn === ROUTES.PROJECT) {
         iconName = focused ? 'briefcase' : 'briefcase-outline';
       }
+      
 
      
       return <Ionicons name={iconName} size={size} color={color} />;
     },
   })}
+  
   tabBarOptions={{
     activeTintColor: 'tomato',
     inactiveTintColor: 'grey',
@@ -49,9 +44,7 @@ export default function BottomTabNavigator(props) {
   }}
   >
       <Tab.Screen  name={ROUTES.HOME_TAB} component={Home} />
-      <Tab.Screen name={ROUTES.NOEUD} component={Noeud} />
       <Tab.Screen name={ROUTES.PROJECT} component={Project} />
-      <Tab.Screen name={ROUTES.VIEW} component={Views} />
       <Tab.Screen name={ROUTES.SETTINGS} component={Settings} />
   </Tab.Navigator>
   )
